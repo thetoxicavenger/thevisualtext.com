@@ -20,7 +20,9 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(require('node-compass')({mode: 'expanded'}));
+if (process.env.NODE_ENV === 'dev') {
+  app.use(require('node-compass')({mode: 'expanded'}));
+}
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
