@@ -7,11 +7,15 @@ var basic = auth.basic({
     realm: "User Area",
     file: join(__dirname, '..', '.htpasswd')
 });
+const podcast = require(join(__dirname, 'podcast', 'index'))
 
 /* GET home page. */
-router.all('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Home - TVT' });
 });
+/* GET home page. */
+router.get('/podcast', (req, res) => res.render('podcast'));
+router.get('/podcastData', podcast);
 
 /* Use htpasswd auth for protected path */
 router.all('/app/*', auth.connect(basic));
