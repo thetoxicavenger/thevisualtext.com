@@ -1,6 +1,10 @@
 // Shorthand for $( document ).ready()
 $(function() {
 
+  var MultiString = function(f) {
+    return f.toString().split('\n').slice(1, -1).join('\n');
+  }
+
   function injectErrorMessage() {
 
   }
@@ -28,7 +32,8 @@ $(function() {
       var episode = episodesData[i]
       var data = extractImportantEpisodeData(episode)
       var $episodesSectionWrapper = $('#podcast-episodes-wrapper')
-      $episodesSectionWrapper.append('<div>hi</div>')
+      var markup = '<div class"container"><div class="row"><div class="col s12 m12"><div class="card"><div class="card-image"><img src="' + data.episodeCoverArtSrc + '"><span class="card-title black-text">' + data.episodeDate + '</span></div><div class="card-content black-text"><p>' + data.episodeDescription + '</p></div><div class="card-action"><a class="black-text" href="' + data.episodeListeningLink + '">Listen</a></div></div></div></div></div>'
+      $episodesSectionWrapper.append(markup)
     }
   }
 
