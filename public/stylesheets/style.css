@@ -23,7 +23,7 @@ a {
   color: white;
   padding-bottom: 15px;
 }
-.wrapper .background .memories {
+.wrapper .background .featured-image {
   display: block;
   margin: 0 auto;
   width: 38%;
@@ -48,7 +48,7 @@ a {
   margin-bottom: 5px;
 }
 @media (max-width: 768px) {
-  .wrapper .background .memories {
+  .wrapper .background .featured-image {
     display: block;
     margin: 0 auto;
     width: 78%;
