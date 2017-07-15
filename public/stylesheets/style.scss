@@ -3,6 +3,10 @@
 // font-family: 'Advent Pro', sans-serif;
 // font-family: 'Alfa Slab One', cursive;
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -81,7 +85,7 @@ a {
       }
     }
   }
-  @media (max-width: 400px) {
+  @media (max-width: 401px) {
     .background {
       .buttons {
         .button {
@@ -100,4 +104,42 @@ a {
 .podcast-page-paragraph  {
   font-family: 'Advent Pro', sans-serif;
   font-size: 24px;
+}
+
+#podcast-episodes-wrapper {
+  text-align: center;
+}
+
+
+.episode-container {
+  display: inline-block;
+  margin-top: 10px;
+  vertical-align: top;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+@media (max-width: 767px) {
+  .episode-container {
+    width: 90%;
+
+  }
+}
+@media (min-width: 768px) {
+  .episode-container {
+    width: 29%;
+    margin-left: 1%;
+  }
+}
+
+.episode-title {
+  a {
+    color: black;
+    font-size: 24px;
+  }
+}
+
+.episode-image-container {
+  img {
+    width: 100%;
+  }
 }

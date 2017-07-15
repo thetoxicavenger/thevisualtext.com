@@ -32,7 +32,12 @@ $(function() {
       var episode = episodesData[i]
       var data = extractImportantEpisodeData(episode)
       var $episodesSectionWrapper = $('#podcast-episodes-wrapper')
-      var markup = '<div class"container"><div class="row"><div class="col s12 m12"><div class="card"><div class="card-image"><img src="' + data.episodeCoverArtSrc + '"><span class="card-title black-text">' + data.episodeDate + '</span></div><div class="card-content black-text"><p>' + data.episodeDescription + '</p></div><div class="card-action"><a class="black-text" href="' + data.episodeListeningLink + '">Listen</a></div></div></div></div></div>'
+
+
+      var markup = '<div class="episode-container"><div class="episode-title"><a href="' + data.episodeListeningLink + '">' + data.title + '</a></div><div class="episode-image-container"><a href="' + data.episodeListeningLink + '"><img src="' + data.episodeCoverArtSrc + '" /></a></div></div>'
+
+
+      // var markup = '<div class"container"><div class="row"><div class="col s12 m12"><div class="card"><div class="card-image"><img src="' + data.episodeCoverArtSrc + '"><span class="card-title black-text">' + data.episodeDate + '</span></div><div class="card-content black-text"><p>' + data.episodeDescription + '</p></div><div class="card-action"><a class="black-text" href="' + data.episodeListeningLink + '">Listen</a></div></div></div></div></div>'
       $episodesSectionWrapper.append(markup)
     }
   }
