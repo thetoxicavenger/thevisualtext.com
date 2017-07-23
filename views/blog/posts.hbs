@@ -1,0 +1,41 @@
+<div class="wrapper">
+  <div class="background" style="padding-top: 0;">
+    <!-- <div class="blog-posts-container"> -->
+      <h1 class='' style="font-family: 'Alfa Slab One', cursive;
+    font-size: 48px; background: black; padding: 12px 0; margin-bottom: 8px;">Blog</h1>
+      <div class="row">
+      {{#each data}}
+
+
+        <div class="col s12 m4">
+          <div class="card" style="max-height: 600px; opacity: 1">
+            <div class="card-image">
+              <img src="{{this.featuredImageUrl}}" style='object-fit: cover; height: 200px;'>
+              <a class="card-title" style="font-family: 'Advent Pro', sans-serif;" href="{{this.postUrl}}">{{this.title}}</a>
+            </div>
+            <div class="card-content black-text" style="height: 100px;">
+              <p>{{this.blurb}}</p>
+            </div>
+            <!-- <div class="card-action">
+              <a href="{{this.postUrl}}" style="color: #6400ff">Read</a>
+            </div> -->
+          </div>
+        </div>
+
+
+        <!-- <div><a class="black-link" href={{this.postUrl}}>{{this.title}}</a></div> -->
+        <!-- <div>{{this.author}}</div> -->
+        <!-- <div>{{this.created_at}}</div> -->
+        <!-- TODO: Different divs (inline-blocked) for image and title+excerpt -->
+        <!-- <div class="post-container">
+          <a href={{this.postUrl}}>
+            <img src={{this.featuredImageUrl}} />
+          </a>
+        </div> -->
+      {{/each}}
+    </div>
+
+    <!-- </div> -->
+  </div>
+
+</div>
