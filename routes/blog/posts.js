@@ -12,6 +12,9 @@ module.exports = (req, res) => {
     let data = _.map(objects, (object) => {
       let { slug, title, created_at } = object
       let { author, content, blurb  } = object.metadata
+      if (object.metadata.legacypublishdate) {
+        created_at = object.metadata.legacypublishdate
+      }
       let featuredImageUrl = object.metadata.featuredimage.url
       created_at = created_at.split('T')[0]
       const postUrl = `/blog/post/${slug}`
@@ -24,7 +27,9 @@ module.exports = (req, res) => {
         featuredImageUrl,
         blurb,
       }
-    }).reverse()
+    })
+
+    data = _.orderBy(data, ['created_at'], 'desc')
 
     res.render('blog/posts', {
       data,
