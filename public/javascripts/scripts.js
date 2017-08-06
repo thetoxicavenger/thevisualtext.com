@@ -1,4 +1,3 @@
-// Shorthand for $( document ).ready()
 $(function() {
 
   var MultiString = function(f) {
