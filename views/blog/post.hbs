@@ -1,20 +1,13 @@
 
 <div class="wrapper">
-
   <div class="background" style="padding-top: 0;">
     <h1 class='' style="font-family: 'Alfa Slab One', cursive;
   font-size: 48px; background: black; padding: 12px 1%; margin-bottom: 8px;">{{data.title}}</h1>
     <div style="min-width: 40%;">
       <img src="{{data.featuredImageUrl}}" style="max-width: 100%;"/>
     </div>
-    <section style="max-width: 90%; margin: 0 auto; text-align: left; background: rgba(255, 255, 255, 0.99); font-family: 'Advent Pro', sans-serif; font-size: 18px; padding: 2%;" class="post-content">{{{data.content}}}</section>
-
+    <section style="max-width: 90%; margin: 0 auto; text-align: left; background: rgba(255, 255, 255, 0.99); font-size: 16px; padding: 2%;" class="post-content">{{{data.content}}}</section>
     <div id="comments_wrapper" style="background: black; margin: 0 auto; margin-top: 30px; max-width: 90%; padding: 20px;">
-      {{!-- react comments app mounts here  --}}
     </div>
-
-  
   </div>
-
 </div>
-<script src="/bundle.js"></script>

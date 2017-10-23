@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "NODE_ENV=dev nodemon ./bin/www & webpack --watch",
-    "build": "webpack"
+    "dev": "NODE_ENV=dev nodemon ./bin/www",
+    "build": "webpack -p"
   },
   "dependencies": {
     "body-parser": "~1.15.1",
